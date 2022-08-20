@@ -95,7 +95,6 @@ const getCountry: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
         }
 
         const data = await fastify.GreenhouseGasInventoryData.findAll(payload);
-        console.log({ data });
         return data;
       } catch (error) {
         reply.statusCode = 500;
